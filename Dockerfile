@@ -105,10 +105,10 @@ RUN set -ex \
 	  && make && make install \
 	  \
   && cd /root \
-  && wget --no-check-certificate https://github.com/schuhschuh/gflags/archive/master.zip \
-	  && unzip master.zip && rm -f master.zip \
-	  && cd gflags-master \
-	  && mkdir build \
+  && wget --no-check-certificate https://github.com/schuhschuh/gflags/archive/v2.2.0.zip \
+          && unzip v2.2.0.zip && rm -f v2.2.0.zip \
+          && cd gflags-2.2.0 \
+          && mkdir build \
  	&& cd build \
  	&& export CXXFLAGS="-fPIC" \
  	&& cmake .. \
