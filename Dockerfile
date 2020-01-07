@@ -134,7 +134,7 @@ RUN set -ex \
   && apt-get purge -y --auto-remove git wget zip \
   && rm -rf /var/lib/apt/lists/*  \
   && cd /root \
-  && echo 'SUBSYSTEM=="usb", ATTRS{idVendor}=="05c6", MODE="0660", GROUP="plugdev"' >> /etc/udev/rules.d
+  && echo 'SUBSYSTEM=="usb", ATTRS{idVendor}=="05c6", MODE="0660", GROUP="plugdev"' >> /etc/udev/rules.d/70-snap.core.rules
 
   ENV PYTHONPATH="${SNPE_ROOT}/lib/python:${SNPE_ROOT}/models/lenet/scripts:${SNPE_ROOT}/models/alexnet/scripts:${PYTHONPATH}" \
       CAFFE_HOME="/root/caffe" \
